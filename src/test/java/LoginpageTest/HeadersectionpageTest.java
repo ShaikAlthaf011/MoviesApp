@@ -23,13 +23,6 @@ public class HeadersectionpageTest extends Browser {
         headersectionpage.usernameinput();
         headersectionpage.passwordinput();
         headersectionpage.login();
-        headersectionpage.Popular();
-        String str1="https://qamoviesapp.ccbp.tech/popular";
-        String str2= driver.getCurrentUrl();
-        Assert.assertEquals(str1,str2,"Popular Url is not matched");
-        headersectionpage.Home();
-        String str3="https://qamoviesapp.ccbp.tech/";
-        String str4= driver.getCurrentUrl();
-        Assert.assertEquals(str3,str4,"Home Url is not matched");
+        headersectionpage.List_nav();
     }
 }

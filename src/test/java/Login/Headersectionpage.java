@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Headersectionpage {
     public WebDriver driver;
@@ -25,11 +26,8 @@ public class Headersectionpage {
     @FindBy(xpath = "//button[@class='login-button']")
     public WebElement Login;
 
-    @FindBy(xpath="//ul[@class='nav-menu-list']/li/a[contains(text(),'Popular')]")
-    public WebElement Nav_popular;
-
-    @FindBy(xpath="//ul[@class='nav-menu-list']/li/a[contains(text(),'Home')]")
-    public WebElement Nav_Home;
+    @FindBy(xpath = "//ul[@class='nav-menu-list']/li")
+    public List<WebElement> Nav_items;
     public Headersectionpage(WebDriver driver) {
         this.driver=driver;
         PageFactory.initElements(driver,this);
@@ -46,15 +44,10 @@ public class Headersectionpage {
     public void login(){
         Login.click();
     }
-    public void Popular(){
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='nav-menu-list']/li/a[contains(text(),'Popular')]")));
-        Nav_popular.click();;
-    }
-    public void Home(){
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='nav-menu-list']/li/a[contains(text(),'Home')]")));
-        Nav_Home.click();
-    }
+   public void  List_nav(){
+        for(WebElement S:Nav_items){
+            S.isDisplayed();
+        }
+   }
 
 }
