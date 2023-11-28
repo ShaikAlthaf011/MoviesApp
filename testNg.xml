@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="PageObjectModelMoviesApp" parallel="classes" thread-count="2">
+    <test name="LoginPageandHomepage" >
+        <classes>
+            <class name="LoginpageTest.LoginpageTest"></class>
+            <class name="LoginpageTest.HeadersectionpageTest"></class>
+            <class name="LoginpageTest.HeadersectionfuncationalitespageTest"></class>
+            <class name="LoginpageTest.PopularPageTest"></class>
+            <class name="LoginpageTest.MovieDetailpageTest"></class>
+            <class name="LoginpageTest.SearchmoviepageTest"></class>
+            <class name="LoginpageTest.AccountpageTest"></class>
+        </classes>
+    </test>
+</suite>
