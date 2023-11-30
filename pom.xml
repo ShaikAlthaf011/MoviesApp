@@ -44,7 +44,7 @@
         <inherited>true</inherited>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>./testgNg.xml</suiteXmlFile>
+            <suiteXmlFile>./testNg.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
